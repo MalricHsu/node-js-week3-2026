@@ -33,6 +33,7 @@ router.post("/", (req, res) => {
     if (Array.isArray(file)) {
       file = file[0];
     }
+
     return res.status(200).json({
       filename: file.originalFilename,
       sizeKB: Math.round(file.size / 1024),
