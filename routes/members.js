@@ -15,7 +15,7 @@ const initialMembers = require("../fixtures/members.json");
 // 函式二：validateBody(body)
 
 const members = [...initialMembers];
-let nextId = 5;
+let nextId = initialMembers.length + 1;
 const filterByQuery = (list, query) => {
   if (!query.level) return list;
   return list.filter((item) => item.level === query.level);
